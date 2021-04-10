@@ -3,9 +3,9 @@ from twisted.internet.protocol import ClientFactory, Protocol
 port = 9090
 class ClientChat(Protocol):
      def connectionMade(self):
-         login = input('Enter your  login;')
+         login = input('Enter your  login')
          fio = input('Enter your  FIO:')
-         addres = input ( ' Enter  your  address:')
+         addres = input ( 'Enter  your  address:')
          data = (login + fio+addres).encode('utf-8')
          self.transport.write(data)
 
