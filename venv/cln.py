@@ -6,9 +6,10 @@ class ClientChat(Protocol):
          login = input('Enter your  login')
          fio = input('Enter your  FIO:')
          addres = input ( 'Enter  your  address:')
-         data = (login + fio+addres).encode('utf-8')
-         self.transport.write(data)
-
+         data1 = (login+fio+addres).split(',')
+         data2 = ",".join(data1)
+         a = data2.encode('utf-8')
+         self.transport.write(a)
      def dataReceived(self, data: str):
          print(data)
          self.connectionMade()
