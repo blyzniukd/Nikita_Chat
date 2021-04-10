@@ -10,7 +10,6 @@ class ClientChat(Protocol):
          a1['login'] = login
          a1['fio'] = fio
          a1['addres'] = addres
-         #data1 = (a1).split(',')
          data2 = ','.join([f'{key},{value}' for key, value in a1.items()])
          a = data2.encode('utf-8')
          self.transport.write(a)
