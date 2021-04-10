@@ -25,7 +25,7 @@ class Chat(Protocol):
     def dataReceived(self, data:str):
         a = data.decode('utf-8')
         print('From Client:', data)
-        self.transport.write( 'Server  Answer.The data was received from client '.encode('utf-8'))
+        self.transport.write('Server  Answer.The data was received from client '.encode('utf-8'))
 
 class ChatFactory(Factory):
 
